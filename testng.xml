@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite1" parallel="tests"  verbose="1" >
+  
+  
+  
+  <test name="chrometests" >
+  	<parameter name="browser"  value="chrome"/>
+    <classes>
+   	 <class name="com.wordpress.tests.ProfileTest"/>
+       <class name="com.wordpress.tests.LoginTest" />
+    </classes>
+  </test>
+  
+  
+ 
+  <test name="firefoxtests">
+  	<parameter name="browser"  value="firefox"/>
+    <classes>
+      <class name="com.wordpress.tests.ProfileTest"/>
+       <class name="com.wordpress.tests.LoginTest" />
+    </classes>
+  </test>
+  
+</suite>
