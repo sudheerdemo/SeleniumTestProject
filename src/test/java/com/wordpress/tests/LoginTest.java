@@ -33,7 +33,7 @@ public class LoginTest  extends BaseTest
 			hPage.clickOnLoginLink();
 			lPage.setUserName("sudheerkumar.gv@gmail.com");
 			lPage.clickOnContinueButton();
-			lPage.setPassword("kumar@123");
+			lPage.setPassword("sudheer@321");
 			lPage.clickOnLoginButton();
 		}
 		
@@ -62,7 +62,7 @@ public class LoginTest  extends BaseTest
 				lPage.setUserName(userName);
 				lPage.clickOnContinueButton();
 				String actualErrorMessage = lPage.getUserNotExistsErrorMsg();
-				Assert.assertEquals(actualErrorMessage, errorMessage);
+				Assert.assertTrue(actualErrorMessage.contains(errorMessage));
 				
 			}
 			

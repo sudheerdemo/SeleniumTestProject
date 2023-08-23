@@ -42,7 +42,7 @@ public class ProfileTest extends BaseTest
 		hPage.clickOnLoginLink();
 		lPage.setUserName("sudheerkumar.gv@gmail.com");
 		lPage.clickOnContinueButton();
-		lPage.setPassword("kumar@123");
+		lPage.setPassword("sudheer@321");
 		lPage.clickOnLoginButton();	
 		Thread.sleep(3*1000);
 		//click on profile icon

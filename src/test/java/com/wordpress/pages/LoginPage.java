@@ -14,7 +14,7 @@ public class LoginPage
 	WebElement userNameElement;
 	
 	
-	@FindBy(how=How.TAG_NAME, using="button")
+	@FindBy(how=How.XPATH, using="//button[text()='Continue']")
 	WebElement ContinueButtonElement;
 	
 	
@@ -22,7 +22,7 @@ public class LoginPage
 	WebElement passwordElement;
 	
 	
-	@FindBy(how=How.TAG_NAME, using="button")
+	@FindBy(how=How.XPATH, using="//button[text()='Log In']")
 	WebElement loginButtonElement;
 	
 	@FindBy(how=How.XPATH,using="//span[text()='User does not exist.']")
@@ -59,7 +59,7 @@ public class LoginPage
 	public void setPassword(String password)
 	{
 		passwordElement.clear();
-		passwordElement.sendKeys("kumar@123");
+		passwordElement.sendKeys(password);
 	}
 	
 	
