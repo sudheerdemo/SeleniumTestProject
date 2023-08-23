@@ -7,8 +7,8 @@
   <test name="chrometests" >
   	<parameter name="browser"  value="chrome"/>
     <classes>
-<!--    	 <class name="com.wordpress.tests.ProfileTest"/> -->
-       <class name="com.wordpress.tests.LoginTest" />
+   	 <class name="com.wordpress.tests.ProfileTest"/>
+<!--        <class name="com.wordpress.tests.LoginTest" /> -->
     </classes>
   </test>
   
