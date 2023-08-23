@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+    
+    options {
+        // Define custom workspace for the entire pipeline
+        ws("/Users/venkatasudheerkumar/work/SeleniumTestProject")
+    }
+    
+     tools{
+        jdk 'JDK11'
+        maven 'maven-3.9.4'
+    }
+
+    stages {
+        stage('Git') {
+            steps {
+                echo 'cleanWs Code.......'
+                cleanWs()
+                echo 'Cloning the Code.......'
+                git branch: 'main', credentialsId: '6610e20e-9a17-42f7-8a5b-2a2ba2bda30e', url: 'https://github.com/sudheerdemo/SeleniumTestProject'
+            }
+        }
+        stage('build_test') {
+            steps {
+                script{
+                 echo 'building and testing the code'
+                 sh 'mvn clean test -DsuiteXmlFile=testng.xml'
+                }
+            }
+        }
+        stage('reports') {
+            steps {
+                 junit 'target/surefire-reports/junitreports/*.xml'
+            }
+        }
+        
+    }
+}
