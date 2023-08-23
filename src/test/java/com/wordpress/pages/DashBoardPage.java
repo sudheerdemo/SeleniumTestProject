@@ -18,7 +18,7 @@ public class DashBoardPage extends BasePage {
 	public void clickOnProfileIcon()
 	{
 		WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(60));
-		WebElement element = driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='Me']")));
+		WebElement element = driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='My Profile']")));
 		click(element);
 	}
 	

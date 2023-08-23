@@ -45,7 +45,7 @@ public class ProfilePage
 	
 	public void clickOnSaveButton()
 	{
-		WebElement saveProfileDetailsElement = driver.findElement(By.xpath("//button[text()='Save Profile Details']"));
+		WebElement saveProfileDetailsElement = driver.findElement(By.xpath("//button[text()='Save profile details']"));
 		saveProfileDetailsElement.click();
 	}
 }
